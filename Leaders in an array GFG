@@ -1,0 +1,19 @@
+class Solution{
+    //Function to find the leaders in the array.
+    static ArrayList<Integer> leaders(int arr[], int n){
+        ArrayList<Integer> array=new ArrayList<Integer>();
+        ArrayList<Integer> array1=new ArrayList<Integer>();
+        array.add(arr[n-1]);
+        int j=0;
+        for(int i=n-2;i>=0;i--){
+            if(arr[i]>=array.get(j)){
+                j++;
+                array.add(arr[i]);
+            }
+        }
+        for(int i=0;i<array.size();i++){
+            array1.add(array.get(array.size()-i-1));
+        }
+        return array1;
+    }
+}
