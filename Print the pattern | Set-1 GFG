@@ -1,0 +1,17 @@
+class GfG
+{
+    void printPat(int n)
+    {   if(n==1){
+        System.out.print( "1" + " $");
+        return;
+    }
+    
+    for(int i=0;i<n;i++){int k=n;
+        for(int j=1;j<=(n-i)*(n);j++){
+            System.out.print(k+" ");
+            if(j%(n-i)==0){k--;}
+        } 
+        System.out.print("$");
+    }
+    }
+}
